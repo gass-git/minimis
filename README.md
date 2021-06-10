@@ -1,3 +1,3 @@
-## Simple & dynamic personal website
+## Gabrielsalinas.codes
 
-This is a simple and responsive personal page, feel free to use it in whatever way you wish !
+Simple and responsive website mainly to showcase my dev profiles.
