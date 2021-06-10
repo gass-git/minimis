@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  overflow: hidden;
+  background: url(images/stars-3.jpg);
+  background-position: center center !important;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat !important;
+  /* Background image is fixed in the viewport so that it doesn't move when 
+   the content's height is greater than the image's height */
+  background-attachment: fixed !important;
+  /* This is what makes the background image rescale based
+   on the container's size */
+  background-size: cover !important;
+  /* Set a background color that will be displayed
+   while the background image is loading */
+  background-color: #090a0f !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#particles-js {
+  display: flex;
+  height: 100vh;
+  z-index: -2;
+}
+#main-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 3vw;
+  right: 3vw;
+  max-width: 700px;
+  min-width: 300px;
+  top: calc(3vh + 2vw);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  border-radius: 0%;
+  border: 4px solid rgba(202, 202, 202);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sub-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px 10px 40px;
+  color: white;
+  /*border: 1px solid white;*/
+}
+.slides {
+  opacity: 0.8;
+  margin: auto;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  opacity: 0.8;
+  display: none;
+  border-radius: 50%;
+  transition: all ease-in-out 400ms;
+}
+.slides:hover {
+  opacity: 1;
+}
+#title {
+  margin-top: 15px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.dot {
+  animation: blinker2 3s linear infinite;
+}
+.codes {
+  color: #ffa500;
+  animation: blinker 20s linear infinite;
+}
+.sub-title {
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  opacity: 0.8;
+  transition: all ease-in-out 400ms;
+}
+.sub-title:hover {
+  opacity: 1;
+}
+#main-container p {
+  margin-top: 30px;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+  transition: all ease-in-out 400ms;
+}
+#main-container ul {
+  margin: 0;
+  padding: 0;
+}
+#main-container li {
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 25px;
+  list-style: none;
+}
+#main-container li a {
+  color: white;
+  font-size: 50px;
+  transition: all ease-in-out 150ms;
+}
+#main-container li a:hover {
+  color: #ffffff;
+}
+
+#main-container li a:focus {
+  outline: 0;
+}
+
+#main-container i:hover {
+  color: #ffa500;
+  /*color: rgb(255, 198, 123);*/
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#polygon {
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  fill: rgba(202, 202, 202);
+}
+
+/* ---- MEDIA ----- */
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  html {
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+    background: url(images/mobile-bg1.jpg) !important;
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center !important;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat !important;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+    background-attachment: fixed !important;
+    /* This is what makes the background image rescale based
+     on the container's size */
+    background-size: cover !important;
+    /* Set a background color that will be displayed
+     while the background image is loading */
+    background-color: #090a0f !important;
+  }
+  .slides {
+    opacity: 0.8;
+    margin: auto;
+    border-radius: 50%;
+    width: 200px !important;
+    height: 200px !important;
+    opacity: 0.8;
+    display: none;
+    border-radius: 50%;
+    transition: all ease-in-out 400ms;
+  }
+  #main-container li a {
+    color: white;
+    font-size: 42px !important;
+    transition: all ease-in-out 150ms;
+    opacity: 0.8;
+  }
+  #main-container li {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 16px !important;
+    list-style: none;
+  }
+  #title {
+    margin-top: 15px;
+    font-size: 35px !important;
+    letter-spacing: 2px !important;
+    font-weight: 400 !important;
+  }
+  .sub-title {
+    font-size: 16px !important;
+    letter-spacing: 3px !important;
+    font-weight: 300 !important;
+    opacity: 0.8 !important;
+    transition: all ease-in-out 400ms !important;
+  }
+  #polygon {
+    margin: 0 auto !important;
+    width: 100% !important;
+    height: 30px !important !important;
+    background: transparent !important;
+    fill: rgb(255, 255, 255, 0.9) !important;
+    bottom: 0 !important;
+  }
+  #main-container {
+    position: absolute !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 4vw !important;
+    right: 4vw !important;
+    max-width: 700px;
+    min-width: 300px;
+    top: 5vw !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    color: rgb(0, 0, 0) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 3px solid rgb(255, 255, 255, 0.9) !important;
+  }
+  .sub-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px 0px 25px !important;
+    color: white;
+    /*border: 1px solid white;*/
+  }
+}
+/* ---- END OF MEDIA --- */
+
+/* ----- KEYFRAMES ---- */
+@keyframes stars-animation {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+@keyframes blinker {
+  0% {
+    opacity: 0.7;
+  }
+  19% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0.2;
+  }
+  23% {
+    opacity: 0.2;
+  }
+  36% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 1;
+  }
+  71% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 0.2;
+  }
+  73% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0.2;
+  }
+  81% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blinker2 {
+  0% {
+    opacity: 100%;
+  }
+  79% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+/* ---- END OF KEYFRAMES --- */

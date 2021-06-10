@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  
+      <head>
+        
+        <!--meta-->
+        <meta charset="utf-8">
+        <meta name="description" 
+        content="Engineer, outdoor sports enthusiast and passionate developer.">
+        <meta name="author" content="Gabriel Salinas">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--styles-->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
+        <!--scripts-->
+        <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+        
+        <!--favicon-->
+        <link rel="icon" type="image/png" href="/favicons/coffee-favicon-3.png">
+
+        <title>Gabriel Salinas Codes</title>
+      
+      </head>
+
+      <!----------------------------------BODY-------------------------------------->        
+      <body>
+
+          <!--background particles-->
+          <div id="particles-js">
+
+              <!-- background stars ---- DEACTIVATED --------
+              <div id="stars-group-one"></div>
+              <div id="stars-group-two"></div>
+              <div id="stars-group-three"></div>
+              ---------------------------------------------->
+
+                  <!--main container-->
+                  <div data-aos="zoom-in" id="main-container">
+
+                        <div class="sub-container">
+
+                            <!--profile images-->
+                            <img class="slides" src="images/1.png">
+                            <img class="slides" src="images/2.jpg">
+                            <img class="slides" src="images/5.png">
+                            <img class="slides" src="images/6.png">
+
+                            <div id="title">
+                              Gabriel Salinas<span class="dot">.</span><span class="codes">Codes</span>
+                            </div>
+
+                            <div class="sub-title">
+                              Engineer & Developer
+                            </div>
+
+                            <p>
+                            Coding is a catalyst for creation. To be able to portray 
+                            a complex idea into reality is fascinating.  
+                            This feeling is something I always try to tap into, in all
+                            of my projects. My main pursue isn't money, I’m more interested
+                            in enjoying the process and challenges that come with it. This
+                            is where I want to be. In the world of ideas, logic and mental
+                            labyrinth.
+                            </p>
+
+                            <!--profiles-->
+                            <ul>
+                              <li><a href="https://github.com/Gassz" target="_blank"><i class="fab fa-github"></i></a></li>
+                              <li><a href="https://www.linkedin.com/in/gabriel-salinas-szada-7a188196/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                              <li><a href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
+                            </ul>
+
+                        </div><!--end of sub-container-->
+
+                        <!--bottom polygon-->
+                        <div id="polygon">
+                            <svg 
+                            width="100%"
+                            height="101.3%"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none">
+                            <polygon points="0,0 0,100 100,100" />
+                            </svg>
+                        </div> 
+
+                  </div><!--end of main-container-->
+              
+          </div><!--end of particles-js-->
+
+
+          <!--particles scripts-->
+          <script type="text/javascript" src="js/particles.js"></script>
+          <script type="text/javascript" src="js/app.js"></script>
+          
+          <!--aos animation scripts-->
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>AOS.init();</script>
+
+          <!--slider script-->
+          <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("slides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 4000); 
+            }
+            </script>
+
+      </body>
+      <!---------------------------------------------------------------------------->        
+
+</html>
+
