@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+:root{
+--orange:#ffa500;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -78,7 +82,7 @@ body {
   animation: blinker2 3s linear infinite;
 }
 .codes {
-  color: #ffa500;
+  color: var(--orange);
   animation: blinker 20s linear infinite;
 }
 .sub-title {
@@ -123,14 +127,31 @@ body {
 }
 
 #main-container i:hover {
-  color: #ffa500;
+  color: --var(orange);
   /*color: rgb(255, 198, 123);*/
   animation: spin 1s linear infinite;
 }
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+#footer{
+  font-size:12px;
+  color:rgba(255, 255, 255, 0.6);
+  margin-bottom:15px;
+}
+#footer #git-link{
+  color:rgba(255, 255, 255, 0.6)!important;
+  transition:1s ease;
+  text-decoration:none!important; 
+}
+#footer #git-link:hover{
+  color:rgba(255, 255, 255, 1)!important;
+}
+#footer #pexels-link{
+  color:#ffa500!important; 
+  text-decoration:none!important; 
+  opacity:0.8!important;
+  transition:1s ease;
+}
+#footer #pexels-link:hover{
+  opacity:1!important;
 }
 #polygon {
   margin: 0 auto;
@@ -231,12 +252,9 @@ body {
 /* ---- END OF MEDIA --- */
 
 /* ----- KEYFRAMES ---- */
-@keyframes stars-animation {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px);
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 @keyframes blinker {
