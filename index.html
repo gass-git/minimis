@@ -5,122 +5,171 @@
         
         <!--meta-->
         <meta charset="utf-8">
-        <meta name="description" content="Passionate developer and outdoor enthusiast.">
-        <meta name="author" content="Gabriel Salinas">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Passionate developer and outdoor enthusiast." />
+        <meta name="author" content="Gabriel Salinas" />
 
         <!--styles-->
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         
         <!--scripts-->
         <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
         
         <!--favicon-->
-        <link rel="icon" type="image/png" href="/favicons/coffee-favicon.png">
+        <link rel="icon" type="image/png" href="/favicons/coffee-favicon.png" />
 
-        <title>Gabriel Salinas Codes</title>
+        <title>Gabriel Salinas</title>
       
       </head>
-
-      <!----------------------------------BODY-------------------------------------->        
+   
       <body>
 
           <!--background particles-->
           <div id="particles-js">
 
-                  <!--main container-->
-                  <div data-aos="zoom-in" id="main-container">
+            <!--main container-->
+            <div data-aos="zoom-in" id="main-container">
 
-                        <div class="sub-container">
+                  <div class="sub-container">
 
-                            <!--profile images-->
-                            <img class="slides" src="images/1.png">
-                            <img class="slides" src="images/2.jpg">
-                            <img class="slides" src="images/5.png">
-                            <img class="slides" src="images/6.png">
+                      <img id="avatar" src="images/1.png">
+                      
+                      <div id="title">
+                        Gabriel Salinas<span id="dot">.</span><span id="codes">Codes</span>
+                      </div>
 
-                            <div id="title">
-                              Gabriel Salinas<span class="dot">.</span><span class="codes">Codes</span>
-                            </div>
+                      <div id="subtitle">
+                        <i class="fas fa-mug-hot" style="margin-right:5px;"></i>DEVELOPER
+                      </div>
 
-                            <div class="sub-title">
-                             Developer
-                            </div>
-
-                            <p>
-                            Coding is a catalyst for creation, to portray 
-                            a complex idea into reality is fascinating to me.  
-                            This feeling is something I always try to tap into when developing projects. My main pursue isn't money, I’m more interested
-                            in enjoying the process and challenges that come with it. This
-                            is where I want to be, in the world of ideas, logic and mental
-                            labyrinth.
-                            </p>
-
-                            <!--profiles-->
-                            <ul>
-                              <li><a href="https://github.com/gass-git" target="_blank"><i class="fab fa-github"></i></a></li>
-                              <li><a href="https://www.linkedin.com/in/gabriel-salinas-szada-7a188196/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                              <li><a href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
-                              <li><a href="https://twitter.com/gass_tweets" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            </ul>
-
-                            
-
-                        </div><!--end of sub-container-->
-
-                        <!---- Footer ---->
-                        <div id="footer">
-                          <a id="git-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">© gabrielsalinas.codes</a> - Background images by 
-                          <a id="pexels-link" href="https://www.pexels.com/@eberhardgross" target="_blank">@eberhardgross</a>
+                      <div class="row">
+                        
+                        <div class="col-left">
+                          <div class="tooltip">
+                            <a href="http://www.mattahan.com/" target="_blank">
+                              <img src="images/leaf-book.png">
+                              <span class="tooltiptext">Art by Mattahan</span>
+                            </a>
+                          </div>
                         </div>
-                        <!---- End of footer ---->
+                        
+                        <div class="col-right">
+                            Coding is a catalyst for creation, to portray 
+                            an idea into reality and be able to interact with it anywhere in the world I find 
+                            it to be fascinating, it is the reason I got hooked at 14.
+                            This feeling is something I always try to tap into when I'm developing projects.
+                              My main interest is enjoying the process and challenges that appear on the coding coast, this
+                            is where I want to be, in the world of ideas, logic and mental
+                            labyrinth. Feel free to check my work or connect with 
+                            me:
+                        </div>
+                        
+                      </div>
+                      
 
-                        <!--bottom polygon-->
-                        <div id="polygon">
-                            <svg 
-                            width="100%"
-                            height="101.3%"
-                            viewBox="0 0 100 100"
-                            preserveAspectRatio="none">
-                            <polygon points="0,0 0,100 100,100" />
-                            </svg>
-                        </div> 
+                      <!-- Profile links -->
+                      <div id="profiles-row">
 
-                  </div><!--end of main-container-->
-              
-          </div><!--end of particles-js-->
+                        <div class="col" id="github">
+                          <a href="https://github.com/gass-git" target="_blank">
+                            <i class="fab fa-github"></i>
+                          </a>
+                        </div>
 
+                        <div class="col" id="linked-in">
+                          <a href="https://www.linkedin.com/in/gabriel-salinas-szada-7a188196/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                        </div>
 
-          <!--particles scripts-->
+                        <div class="col" id="stackoverflow">
+                          <a href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
+                            <i class="fab fa-stack-overflow"></i>
+                          </a>
+                        </div>
+
+                        <div class="col" id="twitter">
+                          <a href="https://twitter.com/gass_tweets" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </div>
+
+                      </div>
+
+                      <!---- Responsive footer ---->
+                      <div id="footer-2">
+
+                        <div>
+                          <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
+                            © gabrielsalinas.codes 2021
+                          </a> - inspired by 
+                          <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
+                            DarkCode
+                          </a> design
+                        </div>
+
+                        <div>
+                          particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
+                          - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
+                          - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
+                          & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
+                        </div>   
+
+                      </div>
+                      <!---- End of footer ---->
+
+                  </div><!-- End of sub-container -->
+
+                  <!-- Bottom polygon-->
+                  <div id="polygon">
+                    <svg 
+                    width="100%"
+                    height="101.3%"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none">
+                    <polygon points="0,0 0,100 100,100" />
+                    </svg>
+                  </div> 
+                  <!-- End of polygon -->
+
+            </div>
+            <!-- End of main-container -->
+
+          </div>
+          <!-- End of particles-js -->
+
+          <!---- Footer ---->
+          <div id="footer">
+
+            <div>
+              <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
+                © gabrielsalinas.codes 2021
+              </a> - inspired by 
+              <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
+                DarkCode
+              </a> design
+            </div>
+
+            <div>
+              particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
+               - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
+               - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
+               & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
+            </div>   
+
+          </div>
+          <!---- End of footer ---->
+
+          <!--Particles scripts-->
           <script type="text/javascript" src="js/particles.js"></script>
           <script type="text/javascript" src="js/app.js"></script>
           
-          <!--aos animation scripts-->
+          <!-- Aos animation scripts -->
           <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
           <script>AOS.init();</script>
-
-          <!--slider script-->
-          <script>
-            var myIndex = 0;
-            carousel();
-            
-            function carousel() {
-              var i;
-              var x = document.getElementsByClassName("slides");
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              myIndex++;
-              if (myIndex > x.length) {myIndex = 1}    
-              x[myIndex-1].style.display = "block";  
-              setTimeout(carousel, 4000); 
-            }
-            </script>
-
+          
       </body>
-      <!---------------------------------------------------------------------------->        
-
 </html>
 

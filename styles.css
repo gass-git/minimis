@@ -1,28 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/*---------------
+Global style
+----------------*/
 
 :root{
---orange:#ffa500;
-}
+/* GLobal colors */ 
+--main-font: "Poppins", sans-serif;
+--color-1:white;
+--color-2: #e5d549;
+--color-3:#ffa500;
+--color-4:#6b8c42;
+--color-5:#e5d549;
+--color-6:#77acf1;
+--color-7:#ffa500;
+--color-8:#00de84;
+--color-9:rgb(255,255,255,0.7);
+--color-10:#ff96ad;
+/* Footer colors */
+--footer-color-1:rgb(255,255,255,0.5);
 
+}
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 html {
-  overflow: hidden;
-  background: url(images/stars-3.jpg);
-  background-position: center center !important;
-  /* Background image doesn't tile */
-  background-repeat: no-repeat !important;
-  /* Background image is fixed in the viewport so that it doesn't move when 
-   the content's height is greater than the image's height */
-  background-attachment: fixed !important;
-  /* This is what makes the background image rescale based
-   on the container's size */
-  background-size: cover !important;
-  /* Set a background color that will be displayed
-   while the background image is loading */
-  background-color: #090a0f !important;
+background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23180d1c' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23261431' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23351947' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23451e5e' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23552277' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+/* background by SVGBackgrounds.com */
 }
 body {
   margin: 0;
@@ -35,6 +43,42 @@ body {
   height: 100vh;
   z-index: -2;
 }
+a:hover{
+  text-decoration:none!important;
+}
+a:focus{
+  outline: 0;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-bottom: 10px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*---------------
+Containers
+----------------*/
+
 #main-container {
   position: absolute;
   margin-left: auto;
@@ -42,221 +86,332 @@ body {
   left: 3vw;
   right: 3vw;
   max-width: 700px;
-  min-width: 300px;
   top: calc(3vh + 2vw);
   z-index: 2;
   text-align: center;
-  color: white;
-  border-radius: 0%;
-  border: 4px solid rgba(202, 202, 202);
-  background-color: rgba(0, 0, 0, 0.4);
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .sub-container {
   width: 100%;
   height: 100%;
   padding: 30px 40px 10px 40px;
-  color: white;
-  /*border: 1px solid white;*/
 }
-.slides {
-  opacity: 0.8;
+
+/*---------------
+Header
+----------------*/
+
+#avatar {
   margin: auto;
-  border-radius: 50%;
   width: 220px;
   height: 220px;
-  opacity: 0.8;
-  display: none;
   border-radius: 50%;
-  transition: all ease-in-out 400ms;
+  border:10px solid rgb(255,255,255,0.2);
+  opacity: 0.8;
+  transition: 400ms ease;
 }
-.slides:hover {
+#avatar:hover {
   opacity: 1;
 }
 #title {
+  color: var(--color-1);
   margin-top: 15px;
-  font-size: 40px;
+  font-size: 35px;
+  font-family: var(--main-font);
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 600;
 }
-.dot {
+#dot {
+  color: var(--color-1);
+  font-family: var(--main-font);
   animation: blinker2 3s linear infinite;
 }
-.codes {
-  color: var(--orange);
+#codes {
+  font-family: var(--main-font);
+  font-weight:600;
+  color: var(--color-2);
   animation: blinker 20s linear infinite;
 }
-.sub-title {
+#subtitle {
+  width:180px;
+  margin:0 auto;
+  font-family:var(--main-font);
+  color: var(--color-1);
   font-size: 18px;
   letter-spacing: 3px;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: all ease-in-out 400ms;
+}
+#subtitle i{
+    color:var(--color-4);
+}
+#subtitle:hover {
+  opacity: 1;
+}
+
+/*---------------
+About section
+----------------*/
+
+.row{
+  margin-top:30px;
+}
+.row:after{
+  content:'';
+  display:table;
+  clear:both;
+  /* border:1px solid white; */
+}
+.col-left{
+  margin-top:25px;
+  float: left;
+  width:25%;
+}
+.col-right{
+  padding:10px 10px 0 20px;
+  text-align: justify;
+  color:var(--color-1);
+  font-family: var(--main-font);
+  float: left;
+  width:75%;
+  font-size: 13px;
   font-weight: 300;
   opacity: 0.8;
   transition: all ease-in-out 400ms;
+  /* border:1px solid white; */
 }
-.sub-title:hover {
-  opacity: 1;
+
+/*---------------
+Profile links
+----------------*/
+
+#profiles-row{
+  margin-top:40px;
+  margin-bottom:10px;
 }
-#main-container p {
-  margin-top: 30px;
-  text-align: justify;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 1;
-  transition: all ease-in-out 400ms;
+#profiles-row:after{
+  content: '';
+  display:table;
+  clear:both;
 }
-#main-container ul {
-  margin: 0;
-  padding: 0;
-}
-#main-container li {
-  display: inline-block;
-  margin-top: 6px;
-  margin-right: 25px;
-  list-style: none;
-}
-#main-container li a {
-  color: white;
-  font-size: 50px;
+#profiles-row .col{
+  width:25%;
+  float:left;
   transition: all ease-in-out 150ms;
 }
-#main-container li a:hover {
-  color: #ffffff;
+#profiles-row i{
+  font-size:40px;
+  color:var(--color-1);
+  opacity: 0.9;
+  transition: 500ms ease;
+}
+#github i:hover{
+  color:var(--color-5);
+  opacity: 1;
+}
+#linked-in i:hover{
+  color:var(--color-6);
+  opacity: 1;
+}
+#stackoverflow i:hover{
+  color:var(--color-7);
+  opacity: 1;
+}
+#twitter i:hover{
+  color:var(--color-8);
+  opacity: 1;
 }
 
-#main-container li a:focus {
-  outline: 0;
-}
+/*------------------
+Footer
+------------------*/
 
-#main-container i:hover {
-  color: --var(orange);
-  /*color: rgb(255, 198, 123);*/
-  animation: spin 1s linear infinite;
-}
 #footer{
-  font-size:12px;
-  color:rgba(255, 255, 255, 0.6);
-  margin-bottom:15px;
+  position:absolute;
+  z-index: 2;
+  font-family:var(--main-font);
+  font-size:11px;
+  color:var(--footer-color-1);
+  bottom:20px;
+  width:100%;
+  text-align:center;
 }
-#footer #git-link{
-  color:rgba(255, 255, 255, 0.6)!important;
-  transition:1s ease;
-  text-decoration:none!important; 
+#footer a{
+  color:var(--footer-color-1);
+  text-decoration:none!important;
 }
-#footer #git-link:hover{
-  color:rgba(255, 255, 255, 1)!important;
+#footer a:hover{
+  color:#ffffff;
 }
-#footer #pexels-link{
-  color:#ffa500!important; 
-  text-decoration:none!important; 
-  opacity:0.7!important;
-  transition:1s ease;
+#footer-2{
+  display:none;
+  font-family:var(--main-font);
+  font-size:11px;
+  color:var(--footer-color-1);
+  margin-top:20px;
+  margin-bottom:10px;
+  width:100%;
+  text-align:center;
 }
-#footer #pexels-link:hover{
-  opacity:1!important;
+#footer-2 a{
+  color:var(--footer-color-1);
+  text-decoration:none!important;
+}
+#footer-2 a:hover{
+  color:#ffffff;
+}
+#gabrielsalinas-link{
+  color:var(--color-9)!important;
+  transition:300ms ease;
+}
+#gabrielsalinas-link:hover{
+  color:var(--color-1)!important;
+  transition:300ms ease;
+}
+#darkcode-link{
+  color:var(--color-8)!important;
+  opacity:0.8;
+  transition:300ms ease;
+}
+#darkcode-link:hover{
+opacity: 1;
+}
+#vincent-link{
+  color:var(--color-7)!important;
+  opacity:0.8;
+  transition:300ms ease;
+}
+#vincent-link:hover{
+  opacity: 1;
+}
+#background-link{
+  color:var(--color-6)!important;
+  opacity:0.8;
+  transition:300ms ease;
+}
+#background-link:hover{
+  opacity: 1;
+}
+#aos-link{
+  color:var(--color-5)!important;
+  opacity:0.8;
+  transition:300ms ease;
+}
+#aos-link:hover{
+  opacity: 1;
+}
+#fs-link{
+  color:var(--color-10)!important;
+  opacity:0.8;
+  transition:300ms ease;
+}
+#fs-link:hover{
+  opacity: 1;
 }
 #polygon {
   margin: 0 auto;
   width: 100%;
   height: 40px;
   background: transparent;
-  fill: rgba(202, 202, 202);
+  fill: #ffffff;
 }
 
-/* ---- MEDIA ----- */
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  html {
-    margin: 0;
-    padding: 0;
-    overflow: visible !important;
-    background: url(images/mobile-bg1.jpg) !important;
-    /* Background image is centered vertically and horizontally at all times */
-    background-position: center center !important;
-    /* Background image doesn't tile */
-    background-repeat: no-repeat !important;
-    /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-    background-attachment: fixed !important;
-    /* This is what makes the background image rescale based
-     on the container's size */
-    background-size: cover !important;
-    /* Set a background color that will be displayed
-     while the background image is loading */
-    background-color: #090a0f !important;
-  }
-  .slides {
-    opacity: 0.8;
-    margin: auto;
-    border-radius: 50%;
-    width: 200px !important;
-    height: 200px !important;
-    opacity: 0.8;
-    display: none;
-    border-radius: 50%;
-    transition: all ease-in-out 400ms;
-  }
-  #main-container li a {
-    color: white;
-    font-size: 42px !important;
-    transition: all ease-in-out 150ms;
-    opacity: 0.8;
-  }
-  #main-container li {
-    display: inline-block;
-    margin-top: 6px;
-    margin-right: 16px !important;
-    list-style: none;
-  }
-  #title {
-    margin-top: 15px;
-    font-size: 35px !important;
-    letter-spacing: 2px !important;
-    font-weight: 400 !important;
-  }
-  .sub-title {
-    font-size: 16px !important;
-    letter-spacing: 3px !important;
-    font-weight: 300 !important;
-    opacity: 0.8 !important;
-    transition: all ease-in-out 400ms !important;
-  }
-  #polygon {
-    margin: 0 auto !important;
-    width: 100% !important;
-    height: 30px !important !important;
-    background: transparent !important;
-    fill: rgb(255, 255, 255, 0.9) !important;
-    bottom: 0 !important;
-  }
+/*------------------
+Media
+------------------*/
+@media screen and (min-width: 500px) and (max-width: 768px) {
   #main-container {
-    position: absolute !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    left: 4vw !important;
-    right: 4vw !important;
+    left: 3vw !important;
+    right: 3vw !important;
     max-width: 700px;
     min-width: 300px;
-    top: 5vw !important;
-    z-index: 2 !important;
-    text-align: center !important;
-    color: rgb(0, 0, 0) !important;
-    background: rgba(0, 0, 0, 0.3) !important;
-    border: 3px solid rgb(255, 255, 255, 0.9) !important;
+    top: 4vw !important;
   }
   .sub-container {
-    width: 100%;
-    height: 100%;
     padding: 20px 25px 0px 25px !important;
-    color: white;
-    /*border: 1px solid white;*/
   }
 }
-/* ---- END OF MEDIA --- */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  #main-container {
+    left: 2vw !important;
+    right: 2vw !important;
+    top: 3vw !important;
+    background: none !important;
+    border: none!important;
+  }
+  .sub-container {
+    padding: 10px 10px 20px 10px !important;
+  }
+  .col-left{
+    display:none;
+  }
+  .col-right{
+    width:100%;
+  }
+  #polygon{
+    display:none;
+  }
+  #footer{
+    display:none;
+  }
+  #footer-2{
+    display:none!important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  #main-container {
+    left: 2vw !important;
+    right: 2vw !important;
+    background: none !important;
+    border: none!important;
+  }
+  .sub-container {
+    padding: 5px 5px 20px 5px !important;
+  }
+  #title{
+    font-size:25px;
+  }
+  #subtitle{
+    font-size:15px;
+  }
+  #avatar{
+  width: 190px;
+  height: 190px;
+  }
+  .col-left{
+    display:none;
+  }
+  .col-right{
+    width:100%;
+  }
+  #profiles-row i{
+  font-size:30px!important;
+  }
+  #polygon{
+    display:none;
+  }
+  #footer{
+    display:none;
+  }
+  #footer-2{
+    display:none!important;
+  }
+}
 
-/* ----- KEYFRAMES ---- */
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
+@media screen and (min-height:0px) and (max-height: 800px) {
+  #main-container {
+    top: 3vw !important;
+  }
+  #footer{
+    display:none;
   }
 }
+
+/*------------------
+Keyframes
+------------------*/
 @keyframes blinker {
   0% {
     opacity: 0.7;
