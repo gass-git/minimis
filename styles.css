@@ -426,7 +426,7 @@ Media
     font-size:35px;
   }
   #footer{
-    bottom:10px;
+    bottom: 5px;
   }
 }
 @media screen and (min-height:700px) and (max-height: 730px) {
