@@ -401,10 +401,77 @@ Media
     display:none!important;
   }
 }
-
-@media screen and (min-height:0px) and (max-height: 800px) {
+@media screen and (min-height:730px) and (max-height: 800px) {
+  #avatar {
+    width: 200px;
+    height: 200px;
+  }
+  #title{
+    font-size:30px;
+  }
+  #subtitle{
+    font-size:17px;
+  }
   #main-container {
     top: 3vw !important;
+  }
+  .row{
+    margin-top:25px;
+  }
+  #profiles-row{
+    margin-top:30px;
+    margin-bottom:5px;
+  }
+  #profiles-row i{
+    font-size:35px;
+  }
+  #footer{
+    bottom:10px;
+  }
+}
+@media screen and (min-height:690px) and (max-height: 730px) {
+  #avatar {
+    width: 190px;
+    height: 190px;
+  }
+  #title{
+    font-size:30px;
+  }
+  #subtitle{
+    font-size:16px;
+  }
+  #main-container {
+    top: 2vw !important;
+  }
+  .row{
+    margin-top:15px;
+  }
+  #profiles-row i{
+    font-size:35px;
+  }
+  #footer{
+    bottom:5px;
+  }
+}
+@media screen and (min-height:0px) and (max-height: 700px) {
+  #avatar {
+    width: 190px;
+    height: 190px;
+  }
+  #title{
+    font-size:30px;
+  }
+  #subtitle{
+    font-size:16px;
+  }
+  #main-container {
+    top: 2vw !important;
+  }
+  .row{
+    margin-top:15px;
+  }
+  #profiles-row i{
+    font-size:35px;
   }
   #footer{
     display:none;
