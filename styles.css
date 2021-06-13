@@ -429,7 +429,7 @@ Media
     bottom:10px;
   }
 }
-@media screen and (min-height:690px) and (max-height: 730px) {
+@media screen and (min-height:700px) and (max-height: 730px) {
   #avatar {
     width: 190px;
     height: 190px;
@@ -445,6 +445,10 @@ Media
   }
   .row{
     margin-top:15px;
+  }  
+  #profiles-row{
+    margin-top:25px;
+    margin-bottom:5px;
   }
   #profiles-row i{
     font-size:35px;
@@ -469,6 +473,10 @@ Media
   }
   .row{
     margin-top:15px;
+  }
+  #profiles-row{
+    margin-top:25px;
+    margin-bottom:5px;
   }
   #profiles-row i{
     font-size:35px;
