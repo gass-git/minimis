@@ -59,6 +59,7 @@ a:focus{
   width: 120px;
   background-color: rgb(0,0,0,0.5);
   color: #fff;
+  font-family: var(--main-font);
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
