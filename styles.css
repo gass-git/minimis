@@ -63,6 +63,7 @@ a:focus{
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+  font-size:13px;
   
   /* Position the tooltip */
   position: absolute;
