@@ -1,186 +1,145 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    
+    <!--meta-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Passionate developer and outdoor enthusiast." />
+    <meta name="author" content="Gabriel Salinas" />
 
-  <audio id="page" src="audio/turn-page.mp3"></audio>
-  <audio id="git" src="audio/git.mp3"></audio>
-  <audio id="linked" src="audio/linked.mp3"></audio>
-  <audio id="stack" src="audio/stack.mp3"></audio>
-  <audio id="tweet" src="audio/tweet.mp3"></audio>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=1" />
 
-      <head>
-        
-        <!--meta-->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Passionate developer and outdoor enthusiast." />
-        <meta name="author" content="Gabriel Salinas" />
+    <title>Gabriel Salinas</title>
 
-        <!--favicon-->
-        <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=1" />
+    <!--styles-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!--scripts-->
+    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+  
+    <audio id="page" src="audio/turn-page.mp3"></audio>
+    <audio id="git" src="audio/git.mp3"></audio>
+    <audio id="linked" src="audio/linked.mp3"></audio>
+    <audio id="stack" src="audio/stack.mp3"></audio>
+    <audio id="tweet" src="audio/tweet.mp3"></audio>
 
-        <!--styles-->
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.css" />
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        
-        <!--scripts-->
-        <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
- 
-        <title>Gabriel Salinas</title>
-      
-      </head>
+  </head>
    
-      <body>
+  <body>
 
-          <!--background particles-->
-          <div id="particles-js">
+    <!--background particles-->
+    <div id="particles-js">
 
-            <!--main container-->
-            <div data-aos="zoom-in" id="main-container">
+      <!--main container-->
+      <div data-aos="zoom-in" id="main-container">
 
-                  <div class="sub-container">
-                    
-                    <div class="tooltip">
-                      <img onclick="change_bg()" id="avatar" src="images/me.png">
-                      <div id="one"><span id="hand-emoji">👋</span>Hi there!</div>
-                    </div>
+        <div class="sub-container">
+          
+          <div class="tooltip">
+            <img onclick="change_bg()" id="avatar" src="images/me.png">
+            <div id="one"><span id="hand-emoji">👋</span>Hi there!</div>
+          </div>
 
-                      <div id="title">
-                        Gabriel Salinas<span id="dot">.</span><span id="codes">Codes</span>
-                      </div>
+          <div id="title">
+            Gabriel Salinas<span id="dot">.</span><span id="codes">Codes</span>
+          </div>
 
-                      <div id="subtitle">
-                        <i class="fas fa-mug-hot" style="margin-right:5px;"></i>DEVELOPER
-                      </div>
+          <div id="subtitle">
+            <i class="fas fa-mug-hot" style="margin-right:5px;"></i>DEVELOPER
+          </div>
 
-                      <div class="row">
-                        
-                        <div class="col-left">
-                          <div class="tooltip">
-                            <a onclick="page_sound()" href="http://www.mattahan.com/" target="_blank">
-                              <img src="images/leaf-book.png">
-                              <div id="two">Art by Mattahan</div>
-                            </a>
-                          </div>
-                        </div>
-                        
-                        <div class="col-right">
-                            Coding is a catalyst for creation, to portray 
-                            an idea into reality and be able to interact with it anywhere in the world I find 
-                            it to be fascinating, it is the reason I got hooked at 14.
-                            This feeling is something I always try to tap into when I'm developing projects.
-                            My main interest is to enjoy the process and challenges that appear on the coding coast but
-                            ATST make cool things. This 
-                            is mainly where I want to be, in the world of ideas, logic and mental
-                            labyrinth. Feel free to check my work or connect with 
-                            me:
-                        </div>
-                        
-                      </div>
-                      
-
-                      <!-- Profile links -->
-                      <div id="profiles-row">
-
-                        <div class="col" id="github">
-                          <a onclick="sound_one()" href="https://github.com/gass-git" target="_blank">
-                            <i class="fab fa-github"></i>
-                          </a>
-                        </div>
-
-                        <div class="col" id="linked-in">
-                          <a onclick="sound_two()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                          </a>
-                        </div>
-
-                        <div class="col" id="stackoverflow">
-                          <a onclick="sound_three()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
-                            <i class="fab fa-stack-overflow"></i>
-                          </a>
-                        </div>
-
-                        <div class="col" id="twitter">
-                          <a onclick="sound_four()" href="https://twitter.com/gass_tweets" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                          </a>
-                        </div>
-
-                      </div>
-
-                      <script>
-
-                        function sound_one(){
-                          var git = document.getElementById('git');
-                          git.play();
-                        }
-
-                        function sound_two(){
-                          var linked = document.getElementById("linked");
-                          linked.play();
-                        };
-
-                        function sound_three(){
-                          var stack = document.getElementById('stack');
-                          stack.play();
-                        }
-
-                        function sound_four(){
-                          var tweet = document.getElementById('tweet');
-                          tweet.play();
-                        }
-
-                        function page_sound(){
-                          var page = document.getElementById('page');
-                          page.play();
-                        }
-
-                      </script>
-
-                      <!---- Responsive footer ---->
-                      <div id="footer-2">
-
-                        <div>
-                          <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
-                            © gabrielsalinas.codes 2021
-                          </a> - inspired by 
-                          <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
-                            DarkCode
-                          </a> design
-                        </div>
-
-                        <div>
-                          particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
-                          - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
-                          - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
-                          & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
-                        </div>   
-
-                      </div>
-                      <!---- End of footer ---->
-
-                  </div><!-- End of sub-container -->
-
-                  <!-- Bottom polygon-->
-                  <div id="polygon">
-                    <svg 
-                    width="100%"
-                    height="101.3%"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none">
-                    <polygon points="0,0 0,100 100,100" />
-                    </svg>
-                  </div> 
-                  <!-- End of polygon -->
-
+          <div class="row">
+            
+            <div class="col-left">
+              <div class="tooltip">
+                <a onclick="page_sound()" href="http://www.mattahan.com/" target="_blank">
+                  <img src="images/leaf-book.png">
+                  <div id="two">Art by Mattahan</div>
+                </a>
+              </div>
             </div>
-            <!-- End of main-container -->
+              
+            <div class="col-right">
+                Coding is a catalyst for creation, to portray 
+                an idea into reality and be able to interact with it anywhere in the world I find 
+                it to be fascinating, it is the reason I got hooked at 14.
+                This feeling is something I always try to tap into when I'm developing projects.
+                My main interest is to enjoy the process and challenges that appear on the coding coast but
+                ATST make cool things. This 
+                is mainly where I want to be, in the world of ideas, logic and mental
+                labyrinth. Feel free to check my work or connect with 
+                me:
+            </div>
+              
+          </div>
+            
+
+          <!-- Profile links -->
+          <div id="profiles-row">
+
+            <div class="col" id="github">
+              <a onclick="sound_one()" href="https://github.com/gass-git" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="col" id="linked-in">
+              <a onclick="sound_two()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+
+            <div class="col" id="stackoverflow">
+              <a onclick="sound_three()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+              </a>
+            </div>
+
+            <div class="col" id="twitter">
+              <a onclick="sound_four()" href="https://twitter.com/gass_tweets" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
 
           </div>
-          <!-- End of particles-js -->
 
-          <!---- Footer ---->
-          <div id="footer">
+          <!-- Audio onclick -->
+          <script>
+
+            function sound_one(){
+              var git = document.getElementById('git');
+              git.play();
+            }
+
+            function sound_two(){
+              var linked = document.getElementById("linked");
+              linked.play();
+            };
+
+            function sound_three(){
+              var stack = document.getElementById('stack');
+              stack.play();
+            }
+
+            function sound_four(){
+              var tweet = document.getElementById('tweet');
+              tweet.play();
+            }
+
+            function page_sound(){
+              var page = document.getElementById('page');
+              page.play();
+            }
+
+          </script>
+          <!-- End of audio onclik -->
+
+          <!---- Responsive footer ---->
+          <div id="footer-2">
 
             <div>
               <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
@@ -193,22 +152,64 @@
 
             <div>
               particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
-               - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
-               - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
-               & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
+              - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
+              - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
+              & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
             </div>   
 
           </div>
           <!---- End of footer ---->
 
-          <!--Particles scripts-->
-          <script type="text/javascript" src="js/particles.js"></script>
-          <script type="text/javascript" src="js/app.js"></script>
+        </div><!-- End of sub-container -->
+
+        <!-- Bottom polygon-->
+        <div id="polygon">
+          <svg 
+          width="100%"
+          height="101.3%"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none">
+          <polygon points="0,0 0,100 100,100" />
+          </svg>
+        </div> 
+        <!-- End of polygon -->
+
+      </div>
+      <!-- End of main-container -->
+
+    </div>
+    <!-- End of particles-js -->
+
+    <!---- Footer ---->
+    <div id="footer">
+
+      <div>
+        <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
+          © gabrielsalinas.codes 2021
+        </a> - inspired by 
+        <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
+          DarkCode
+        </a> design
+      </div>
+
+      <div>
+        particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
+          - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
+          - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
+          & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
+      </div>   
+
+    </div>
+    <!---- End of footer ---->
+
+    <!--Particles scripts-->
+    <script type="text/javascript" src="js/particles.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <!-- Aos animation scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
           
-          <!-- Aos animation scripts -->
-          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-          <script>AOS.init();</script>
-          
-      </body>
+  </body>
 </html>
 
