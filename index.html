@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-  
+
+  <audio id="page" src="audio/turn-page.mp3"></audio>
+  <audio id="git" src="audio/git.mp3"></audio>
+  <audio id="linked" src="audio/linked.mp3"></audio>
+  <audio id="stack" src="audio/stack.mp3"></audio>
+  <audio id="tweet" src="audio/tweet.mp3"></audio>
+
       <head>
         
         <!--meta-->
@@ -17,6 +23,9 @@
         <!--scripts-->
         <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
         
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!--favicon-->
         <link rel="icon" type="image/png" href="/favicons/coffee-favicon.png" />
 
@@ -33,9 +42,12 @@
             <div data-aos="zoom-in" id="main-container">
 
                   <div class="sub-container">
+                    
+                    <div class="tooltip">
+                      <img onclick="change_bg()" id="avatar" src="images/me.png">
+                      <div id="one"><span id="hand-emoji">👋</span>Hi there!</div>
+                    </div>
 
-                      <img id="avatar" src="images/me.png">
-                      
                       <div id="title">
                         Gabriel Salinas<span id="dot">.</span><span id="codes">Codes</span>
                       </div>
@@ -48,9 +60,9 @@
                         
                         <div class="col-left">
                           <div class="tooltip">
-                            <a href="http://www.mattahan.com/" target="_blank">
+                            <a onclick="page_sound()" href="http://www.mattahan.com/" target="_blank">
                               <img src="images/leaf-book.png">
-                              <span class="tooltiptext">Art by Mattahan</span>
+                              <div id="two"><span id="emoji">✍</span> Art by Mattahan</div>
                             </a>
                           </div>
                         </div>
@@ -74,30 +86,59 @@
                       <div id="profiles-row">
 
                         <div class="col" id="github">
-                          <a href="https://github.com/gass-git" target="_blank">
+                          <a onclick="sound_one()" href="https://github.com/gass-git" target="_blank">
                             <i class="fab fa-github"></i>
                           </a>
                         </div>
 
                         <div class="col" id="linked-in">
-                          <a href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
+                          <a onclick="sound_two()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
                           </a>
                         </div>
 
                         <div class="col" id="stackoverflow">
-                          <a href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
+                          <a onclick="sound_three()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
                             <i class="fab fa-stack-overflow"></i>
                           </a>
                         </div>
 
                         <div class="col" id="twitter">
-                          <a href="https://twitter.com/gass_tweets" target="_blank">
+                          <a onclick="sound_four()" href="https://twitter.com/gass_tweets" target="_blank">
                             <i class="fab fa-twitter"></i>
                           </a>
                         </div>
 
                       </div>
+
+                      <script>
+
+                        function sound_one(){
+                          var git = document.getElementById('git');
+                          git.play();
+                        }
+
+                        function sound_two(){
+                          var linked = document.getElementById("linked");
+                          linked.play();
+                        };
+
+                        function sound_three(){
+                          var stack = document.getElementById('stack');
+                          stack.play();
+                        }
+
+                        function sound_four(){
+                          var tweet = document.getElementById('tweet');
+                          tweet.play();
+                        }
+
+                        function page_sound(){
+                          var page = document.getElementById('page');
+                          page.play();
+                        }
+
+                      </script>
 
                       <!---- Responsive footer ---->
                       <div id="footer-2">

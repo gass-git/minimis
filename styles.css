@@ -49,12 +49,53 @@ a:hover{
 a:focus{
   outline: 0;
 }
+#emoji{
+  font-size:20px;
+  margin-right:4px;
+}
+#hand-emoji{
+  font-size:20px;
+  margin-right:4px;
+  animation-name: wave;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
 .tooltip {
   position: relative;
   display: inline-block;
 }
-.tooltip .tooltiptext {
+.tooltip #one{
   visibility: hidden;
+  opacity:0;
+  font-family:var(--main-font);
+  font-size:13px;
+  width: 110px;
+  background-color: rgb(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  left: 110%;
+  transition:visibility 1.5s linear,opacity 1s linear;
+}
+.tooltip #one::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(0,0,0,0.5) transparent transparent;
+}
+.tooltip #two{
+  visibility: hidden;
+  opacity:0;
   width: 120px;
   background-color: rgb(0,0,0,0.5);
   color: #fff;
@@ -71,11 +112,16 @@ a:focus{
   left: 50%;
   margin-left: -60px;
   margin-bottom: 10px;
+  transition:visibility 1s linear,opacity 1s linear;
 }
-.tooltip:hover .tooltiptext {
+.tooltip:hover #one {
   visibility: visible;
+  opacity:1;
 }
-
+.tooltip:hover #two{
+  visibility: visible;
+  opacity:1;
+}
 /*---------------
 Containers
 ----------------*/
@@ -91,7 +137,8 @@ Containers
   z-index: 2;
   text-align: center;
   border: 3px solid white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url('images/robot-bg.png');
+  background-size: auto;
 }
 .sub-container {
   width: 100%;
@@ -108,12 +155,13 @@ Header
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border:10px solid rgb(255,255,255,0.2);
+  border:10px solid rgba(255, 255, 255, 0.2);
   opacity: 0.8;
   transition: 400ms ease;
 }
-#avatar:hover {
-  opacity: 1;
+#avatar:hover{
+  opacity:0.9;
+  transform: scale(1.1);
 }
 #title {
   color: var(--color-1);
@@ -493,6 +541,16 @@ Media
 /*------------------
 Keyframes
 ------------------*/
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+100% { transform: rotate( 0.0deg) }
+}
 @keyframes blinker {
   0% {
     opacity: 0.7;
