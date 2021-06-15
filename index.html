@@ -26,6 +26,7 @@
     <audio id="linked" src="audio/linked.mp3"></audio>
     <audio id="stack" src="audio/stack.mp3"></audio>
     <audio id="tweet" src="audio/tweet.mp3"></audio>
+    <audio id="mail-audio" src="audio/mail.mp3"></audio>
 
   </head>
    
@@ -105,6 +106,15 @@
               </a>
             </div>
 
+            <div class="col" id="mail-div" onclick="animate_envelope()">
+              <div class="tooltip">
+                <a href="#">  
+                  <i id="envelope" class="fas fa-envelope"></i>
+                  <div id="tooltip-three">Let's talk</div>
+                </a>
+              </div>  
+            </div>
+
           </div>
 
           <!-- Audio onclick -->
@@ -133,6 +143,50 @@
             function page_sound(){
               var page = document.getElementById('page');
               page.play();
+            }
+
+            function animate_envelope(){
+
+              var mail = document.getElementById('mail-audio');
+              var envelope = document.getElementById('envelope');
+              var tooltip = document.getElementById('tooltip-three');
+              var email = 'g.szada@gmail.com';
+
+              mail.play();
+              envelope.classList.remove('fa-envelope');
+              envelope.classList.add('fa-envelope-open');
+              
+              setTimeout(show_envelope, 200);
+              setTimeout(copyToClipboard, 100);
+              setTimeout(close_envelope, 700);
+              envelope.addEventListener('mouseout', retrieve_msg);
+
+              function copyToClipboard() {
+                var dummy = document.createElement("textarea");
+                document.body.appendChild(dummy); 
+                dummy.value = 'g.szada@gmail.com';
+                dummy.select();
+                document.execCommand("copy");
+                document.body.removeChild(dummy);
+                tooltip.innerHTML = 'Email copied!';
+              }
+
+              function close_envelope(){
+                  envelope.classList.remove('fa-envelope-open-text');
+                  envelope.classList.add('fa-envelope');
+                }
+
+              function show_envelope(){
+                envelope.classList.remove('fa-envelope-open');
+                envelope.classList.add('fa-envelope-open-text');
+              }
+
+              function retrieve_msg(){
+                setTimeout(function() {
+                  tooltip.innerHTML = "Let's talk";
+                }, 1000);   
+              }
+
             }
 
           </script>

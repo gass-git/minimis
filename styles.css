@@ -18,6 +18,7 @@ Global style
 --color-8:#00de84;
 --color-9:rgb(255,255,255,0.7);
 --color-10:#ff96ad;
+--color-11:#D5DBB3;
 /* Footer colors */
 --footer-color-1:rgb(255,255,255,0.5);
 
@@ -114,11 +115,36 @@ a:focus{
   margin-bottom: 10px;
   transition:visibility 1s linear,opacity 1s linear;
 }
+.tooltip #tooltip-three{
+  visibility: hidden;
+  opacity:0;
+  width: 120px;
+  background-color: rgb(0,0,0,0.5);
+  color: #fff;
+  font-family: var(--main-font);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size:13px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-bottom: 10px;
+  transition:visibility 1s linear,opacity 1s linear;
+}
 .tooltip:hover #one {
   visibility: visible;
   opacity:1;
 }
 .tooltip:hover #two{
+  visibility: visible;
+  opacity:1;
+}
+.tooltip:hover #tooltip-three{
   visibility: visible;
   opacity:1;
 }
@@ -246,7 +272,7 @@ Profile links
   clear:both;
 }
 #profiles-row .col{
-  width:25%;
+  width:20%;
   float:left;
   transition: all ease-in-out 150ms;
 }
@@ -270,6 +296,10 @@ Profile links
 }
 #twitter i:hover{
   color:var(--color-8);
+  opacity: 1;
+}
+#mail-div i:hover{
+  color:var(--color-11);
   opacity: 1;
 }
 
