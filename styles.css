@@ -134,7 +134,7 @@ a:focus{
   left: 50%;
   margin-left: -60px;
   margin-bottom: 10px;
-  transition:visibility 700ms linear,opacity 500ms linear;
+  transition:visibility 700ms linear,opacity 400ms linear;
 }
 .tooltip:hover #one {
   visibility: visible;

@@ -150,8 +150,6 @@
               document.getElementById('tooltip-three').style.cssText = null;
             };
 
-            
-
             function animate_envelope(){
 
               var mail = document.getElementById('mail-audio');
@@ -159,20 +157,26 @@
               var tooltip = document.getElementById('tooltip-three');
               var email = 'g.szada@gmail.com';
 
-              // Remove style on tooltip-three tag if there are (mobile)
+              // Copy email to clipboard
+              copyToClipboard();
+
+              // Start fresh: clean styles on html tag
               tooltip.style.cssText = null;
 
-              mail.play();
-              envelope.classList.remove('fa-envelope');
-              envelope.classList.add('fa-envelope-open');
-              
-              setTimeout(show_envelope, 200);
-              setTimeout(copyToClipboard, 100);
-              setTimeout(close_envelope, 700);
               envelope.addEventListener('mouseout', retrieve_msg);
 
-              // For mobiles
-              setTimeout(hide_tooltip, 1000)
+              // Play audio
+              mail.play();
+
+              // Icon animation
+              envelope.classList.remove('fa-envelope');
+              envelope.classList.add('fa-envelope-open');
+              setTimeout(show_envelope, 300);
+              setTimeout(close_envelope, 700);
+
+              // Hide and set tooltip to default
+              setTimeout(hide_tooltip, 1000);
+              setTimeout(retrieve_msg, 1300);
 
               function hide_tooltip(){
                 tooltip.style.opacity = '0';
@@ -199,9 +203,9 @@
               }
 
               function retrieve_msg(){
-                setTimeout(function() {
+                setTimeout(function(){
                   tooltip.innerHTML = "Let's talk";
-                }, 1000);   
+                },400);
               }
 
             }
