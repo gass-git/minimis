@@ -412,8 +412,10 @@ Media
     padding: 20px 25px 0px 25px !important;
   }
 }
-@media screen and (min-width: 350px) and (max-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 600px) {
   #main-container {
+    width:100%!important;
+    margin:0!important;
     left: 2vw !important;
     right: 2vw !important;
     top: 3vw !important;
@@ -448,7 +450,7 @@ Media
     display:none!important;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 350px) {
+@media screen and (min-width: 0px) and (max-width: 400px) {
   #main-container {
     left: 0vw !important;
     right: 0vw !important;
@@ -487,7 +489,9 @@ Media
     opacity:0;
   }
   .tooltip #tooltip-three{
-    width: 90px;
+    width: 90px!important;
+    font-size:12px!important;
+    margin-left: -70px;
   }
   #polygon{
     display:none;
