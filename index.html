@@ -108,7 +108,7 @@
 
             <div class="col" id="mail-div" onclick="animate_envelope()">
               <div class="tooltip">
-                <a href="#/">  
+                <a id="mail-link" href="#/">  
                   <i id="envelope" class="fas fa-envelope"></i>
                   <div id="tooltip-three">Let's talk</div>
                 </a>
@@ -145,12 +145,22 @@
               page.play();
             }
 
+            document.getElementById('mail-link').addEventListener('mouseover', remove_style);
+            function remove_style(){
+              document.getElementById('tooltip-three').style.cssText = null;
+            };
+
+            
+
             function animate_envelope(){
 
               var mail = document.getElementById('mail-audio');
               var envelope = document.getElementById('envelope');
               var tooltip = document.getElementById('tooltip-three');
               var email = 'g.szada@gmail.com';
+
+              // Remove style on tooltip-three tag if there are (mobile)
+              tooltip.style.cssText = null;
 
               mail.play();
               envelope.classList.remove('fa-envelope');
@@ -160,6 +170,13 @@
               setTimeout(copyToClipboard, 100);
               setTimeout(close_envelope, 700);
               envelope.addEventListener('mouseout', retrieve_msg);
+
+              // For mobiles
+              setTimeout(hide_tooltip, 3000)
+
+              function hide_tooltip(){
+                tooltip.style.opacity = '0';
+              }
 
               function copyToClipboard() {
                 var dummy = document.createElement("textarea");
@@ -188,9 +205,6 @@
               }
 
             }
-
-            var elem = document.getElementById("myDiv");
-            elem.parentNode.removeChild(elem);
 
           </script>
           <!-- End of audio onclik -->

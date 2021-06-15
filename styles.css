@@ -245,7 +245,7 @@ About section
   width:25%;
 }
 .col-right{
-  padding:10px 10px 0 20px;
+  padding:10px 0px 0px 0px;
   text-align: justify;
   color:var(--color-1);
   font-family: var(--main-font);
@@ -423,7 +423,7 @@ Media
     border: none!important;
   }
   .sub-container {
-    padding: 15px 10px 30px 10px !important;
+    padding: 15px 20px 30px 20px;
   }
   .col-left{
     display:none;
@@ -440,6 +440,26 @@ Media
     visibility: hidden;
     opacity:0;
   }
+  #github i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #linked-in i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #stackoverflow i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #twitter i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #mail-div i:hover{
+    color:white;
+    opacity: 0.9;
+  }
   #polygon{
     display:none;
   }
@@ -455,10 +475,16 @@ Media
     left: 0vw !important;
     right: 0vw !important;
     background: none !important;
-    border: none!important;
+    border:none;
+  }
+  #title{
+    font-size:25px!important;
+  }
+  .col-right{
+    font-size:14px!important;
   }
   .sub-container {
-    padding: 15px 10px 30px 3px !important;
+    padding: 15px 25px 30px 25px;
   }
   #title{
     font-size:25px;
@@ -490,8 +516,28 @@ Media
   }
   .tooltip #tooltip-three{
     width: 90px!important;
-    font-size:12px!important;
+    font-size:13px!important;
     margin-left: -70px;
+  }
+  #github i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #linked-in i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #stackoverflow i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #twitter i:hover{
+    color:white;
+    opacity: 0.9;
+  }
+  #mail-div i:hover{
+    color:white;
+    opacity: 0.9;
   }
   #polygon{
     display:none;
