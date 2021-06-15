@@ -412,7 +412,7 @@ Media
     padding: 20px 25px 0px 25px !important;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 600px) {
+@media screen and (min-width: 350px) and (max-width: 600px) {
   #main-container {
     left: 2vw !important;
     right: 2vw !important;
@@ -421,13 +421,22 @@ Media
     border: none!important;
   }
   .sub-container {
-    padding: 10px 10px 20px 10px !important;
+    padding: 15px 10px 30px 10px !important;
   }
   .col-left{
     display:none;
   }
   .col-right{
     width:100%;
+  }
+  .tooltip #one{
+    width:10px!important;
+    font-size:1px!important;
+    display:none;
+  }
+  .tooltip:hover #one {
+    visibility: hidden;
+    opacity:0;
   }
   #polygon{
     display:none;
@@ -439,15 +448,15 @@ Media
     display:none!important;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 320px) {
+@media screen and (min-width: 0px) and (max-width: 350px) {
   #main-container {
-    left: 2vw !important;
-    right: 2vw !important;
+    left: 0vw !important;
+    right: 0vw !important;
     background: none !important;
     border: none!important;
   }
   .sub-container {
-    padding: 5px 5px 20px 5px !important;
+    padding: 15px 10px 30px 3px !important;
   }
   #title{
     font-size:25px;
@@ -467,6 +476,18 @@ Media
   }
   #profiles-row i{
   font-size:30px!important;
+  }
+  .tooltip #one{
+    width:10px!important;
+    font-size:1px!important;
+    display:none;
+  }
+  .tooltip:hover #one {
+    visibility: hidden;
+    opacity:0;
+  }
+  .tooltip #tooltip-three{
+    width: 90px;
   }
   #polygon{
     display:none;

@@ -41,7 +41,7 @@
         <div class="sub-container">
           
           <div class="tooltip">
-            <img onclick="change_bg()" id="avatar" src="images/me.png">
+            <img id="avatar" src="images/me.png">
             <div id="one"><span id="hand-emoji">👋</span>Hi there!</div>
           </div>
 
@@ -108,7 +108,7 @@
 
             <div class="col" id="mail-div" onclick="animate_envelope()">
               <div class="tooltip">
-                <a href="#">  
+                <a href="#/">  
                   <i id="envelope" class="fas fa-envelope"></i>
                   <div id="tooltip-three">Let's talk</div>
                 </a>
@@ -188,6 +188,9 @@
               }
 
             }
+
+            var elem = document.getElementById("myDiv");
+            elem.parentNode.removeChild(elem);
 
           </script>
           <!-- End of audio onclik -->
