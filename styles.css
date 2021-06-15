@@ -82,7 +82,7 @@ a:focus{
   z-index: 1;
   top: 70px;
   left: 110%;
-  transition:visibility 1.5s linear,opacity 1s linear;
+  transition:visibility 700ms linear,opacity 500ms linear;
 }
 .tooltip #one::after {
   content: "";
@@ -113,7 +113,7 @@ a:focus{
   left: 50%;
   margin-left: -60px;
   margin-bottom: 10px;
-  transition:visibility 1s linear,opacity 1s linear;
+  transition:visibility 700ms linear,opacity 500ms linear;
 }
 .tooltip #tooltip-three{
   visibility: hidden;
@@ -134,7 +134,7 @@ a:focus{
   left: 50%;
   margin-left: -60px;
   margin-bottom: 10px;
-  transition:visibility 1s linear,opacity 1s linear;
+  transition:visibility 700ms linear,opacity 500ms linear;
 }
 .tooltip:hover #one {
   visibility: visible;
