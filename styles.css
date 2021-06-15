@@ -511,9 +511,10 @@ Media
     opacity:0;
   }
   .tooltip #tooltip-three{
-    width: 90px!important;
+    width: 100px!important;
     font-size:13px!important;
     margin-left: -70px;
+    padding:5px!important;
   }
   #github i:hover{
     color:white;
