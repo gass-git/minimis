@@ -118,7 +118,7 @@ a:focus{
 .tooltip #tooltip-three{
   visibility: hidden;
   opacity:0;
-  width: 120px;
+  width: 100px;
   background-color: rgb(0,0,0,0.5);
   color: #fff;
   font-family: var(--main-font);
@@ -132,9 +132,9 @@ a:focus{
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -50px;
   margin-bottom: 10px;
-  transition:visibility 700ms linear,opacity 400ms linear;
+  transition:visibility 250ms linear,opacity 250ms linear;
 }
 .tooltip:hover #one {
   visibility: visible;

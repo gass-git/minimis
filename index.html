@@ -106,9 +106,9 @@
               </a>
             </div>
 
-            <div class="col" id="mail-div" onclick="animate_envelope()">
+            <div class="col" id="mail-div">
               <div class="tooltip">
-                <a id="mail-link" href="#/">  
+                <a id="mail-link" href="#/"  onclick="animate_envelope()">  
                   <i id="envelope" class="fas fa-envelope"></i>
                   <div id="tooltip-three">Let's talk</div>
                 </a>
@@ -145,11 +145,6 @@
               page.play();
             }
 
-            document.getElementById('mail-link').addEventListener('mouseover', remove_style);
-            function remove_style(){
-              document.getElementById('tooltip-three').style.cssText = null;
-            };
-
             function animate_envelope(){
 
               var mail = document.getElementById('mail-audio');
@@ -176,7 +171,7 @@
 
               // Hide and set tooltip to default
               setTimeout(hide_tooltip, 1000);
-              setTimeout(retrieve_msg, 1300);
+              setTimeout(retrieve_msg, 1000);
 
               function hide_tooltip(){
                 tooltip.style.opacity = '0';
@@ -205,10 +200,25 @@
               function retrieve_msg(){
                 setTimeout(function(){
                   tooltip.innerHTML = "Let's talk";
-                },400);
+                },200);
               }
 
             }
+
+            envelope.addEventListener('mouseover', function(){
+              
+              var tooltip = document.getElementById('tooltip-three');
+              
+              // Tooltip might have "visibility = hidden" if the email btn was clicked 
+              // if it's the case remove all styles in html tag
+              if(tooltip.style.cssText != null){
+                tooltip.style.cssText = null;
+              }
+              if(tooltip.innerHTML != "Let's talk"){
+                tooltip.innerHTML = "Let's talk";
+              }
+
+            });
 
           </script>
           <!-- End of audio onclik -->
