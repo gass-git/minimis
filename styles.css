@@ -164,8 +164,7 @@ Containers
   text-align: center;
   border: 3px solid white;
   background-color:rgb(0,0,0,0.25);
-  background-image: url('images/robot-bg.png');
-  background-size: auto;
+
 }
 .sub-container {
   width: 100%;
