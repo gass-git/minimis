@@ -27,7 +27,7 @@ function sound_one(){
 
     var mail = document.getElementById('mail-audio');
     var tooltip = document.getElementById('tooltip-three');
-    var email = 'g.szada@gmail.com';
+    var email = 'gabriel.salinas@protonmail.com';
 
     // Copy email to clipboard
     copyToClipboard();
