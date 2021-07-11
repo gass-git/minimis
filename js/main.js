@@ -27,7 +27,6 @@ function sound_one(){
 
     var mail = document.getElementById('mail-audio');
     var tooltip = document.getElementById('tooltip-three');
-    var email = 'gabriel.salinas@protonmail.com';
 
     // Copy email to clipboard
     copyToClipboard();
@@ -61,7 +60,7 @@ function sound_one(){
     function copyToClipboard() {
       var dummy = document.createElement("textarea");
       document.body.appendChild(dummy); 
-      dummy.value = 'g.szada@gmail.com';
+      dummy.value = 'gabriel.salinas@protonmail.com';
       dummy.select();
       document.execCommand("copy");
       document.body.removeChild(dummy);
