@@ -26,7 +26,6 @@ function sound_one(){
   function animate_envelope(){
 
     var mail = document.getElementById('mail-audio');
-    var envelope = document.getElementById('envelope');
     var tooltip = document.getElementById('tooltip-three');
     var email = 'g.szada@gmail.com';
 
@@ -42,8 +41,12 @@ function sound_one(){
     mail.play();
 
     // Icon animation
-    envelope.classList.remove('fa-envelope');
-    envelope.classList.add('fa-envelope-open');
+
+    
+    $('#envelope').css('transition','none');
+    $('#envelope').removeClass('fa-envelope');
+    $('#envelope').css('margin-top','-5px');
+    $('#envelope').addClass('fa-envelope-open');
     setTimeout(show_envelope, 300);
     setTimeout(close_envelope, 1000);
 
@@ -66,8 +69,12 @@ function sound_one(){
     }
 
     function close_envelope(){
-        envelope.classList.remove('fa-envelope-open-text');
-        envelope.classList.add('fa-envelope');
+      $('#envelope').css('margin-top','0px')
+      envelope.classList.remove('fa-envelope-open-text');
+      envelope.classList.add('fa-envelope');
+
+      setTimeout(function(){ $('#envelope').css('transition','500ms ease-in-out') }, 200);
+
       }
 
     function show_envelope(){

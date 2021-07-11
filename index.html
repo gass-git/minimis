@@ -9,25 +9,26 @@
     <meta name="author" content="Gabriel Salinas" />
 
     <!--favicon-->
-    <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=1" />
+    <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=3" />
 
     <title>Gabriel Salinas</title>
 
     <!--styles-->
-    <link rel="stylesheet" href="styles.css?2" type="text/css"/>
+    <link rel="stylesheet" href="styles.css?4" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!--scripts-->
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
   
-    <audio id="page" src="audio/turn-page.mp3"></audio>
-    <audio id="git" src="audio/git.mp3"></audio>
-    <audio id="linked" src="audio/linked.mp3"></audio>
-    <audio id="stack" src="audio/stack.mp3"></audio>
-    <audio id="tweet" src="audio/tweet.mp3"></audio>
-    <audio id="mail-audio" src="audio/mail.mp3"></audio>
+    <audio id="page" src="sounds/turn-page.mp3"></audio>
+    <audio id="git" src="sounds/git.mp3"></audio>
+    <audio id="linked" src="sounds/linked.mp3"></audio>
+    <audio id="stack" src="sounds/stack.mp3"></audio>
+    <audio id="tweet" src="sounds/tweet.mp3"></audio>
+    <audio id="mail-audio" src="sounds/mail.mp3"></audio>
 
   </head>
    
@@ -42,7 +43,7 @@
         <div class="sub-container">
           
           <div class="tooltip">
-            <img id="avatar" src="images/me.png">
+            <img id="avatar" src="images/me2.png">
             <div id="one"><span id="hand-emoji">👋</span>Hi there!</div>
           </div>
 
@@ -85,25 +86,25 @@
 
             <div class="col" id="github">
               <a onclick="sound_one()" href="https://github.com/gass-git" target="_blank">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" style="transition: 500ms ease-in-out"></i>
               </a>
             </div>
 
             <div class="col" id="linked-in">
               <a onclick="sound_two()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-linkedin-in" style="transition: 500ms ease-in-out"></i>
               </a>
             </div>
 
             <div class="col" id="stackoverflow">
               <a onclick="sound_three()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
-                <i class="fab fa-stack-overflow"></i>
+                <i class="fab fa-stack-overflow" style="transition: 500ms ease-in-out"></i>
               </a>
             </div>
 
             <div class="col" id="twitter">
               <a onclick="sound_four()" href="https://twitter.com/gass_tweets" target="_blank">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitter" style="transition: 500ms ease-in-out"></i>
               </a>
             </div>
 
@@ -111,7 +112,7 @@
               <div class="tooltip">
                 <a id="mail-link" href="#/"  onclick="animate_envelope()">  
                   <i id="envelope" class="fas fa-envelope"></i>
-                  <div id="tooltip-three">Let's talk</div>
+                  <div id="tooltip-three" style="transition: 500ms ease-in-out">Let's talk</div>
                 </a>
               </div>  
             </div>
