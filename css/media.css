@@ -1,0 +1,168 @@
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    #main-container {
+        left: 3vw !important;
+        right: 3vw !important;
+        max-width: 700px;
+        min-width: 300px;
+        top: 4vw !important;
+    }
+    .sub-container {padding: 20px 25px 0px 25px !important}
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    #main-container {
+        left: 0vw !important;
+        right: 0vw !important;
+        background: none !important;
+        border:none;
+    }
+    .sub-container {
+        padding: 15px 35px 30px 35px;
+    }
+    .tooltip #one{
+        width:10px!important;
+        font-size:1px!important;
+        display:none;
+    }
+    .tooltip:hover #one {
+        visibility: hidden;
+        opacity:0;
+    }
+    #polygon{
+        display:none;
+    }
+    footer{
+        display:none;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    #main-container {
+        left: 0vw !important;
+        right: 0vw !important;
+        background: none !important;
+        border:none;
+    }
+    #title{
+        font-size:25px!important;
+    }
+    .sub-container {
+        padding: 15px 25px 30px 25px;
+    }
+    #title{
+        font-size:25px;
+    }
+    #subtitle{
+        font-size:15px;
+    }
+    #avatar{
+        width: 190px;
+        height: 190px;
+    }
+    #profiles-row i{
+        font-size:30px!important;
+    }
+    .tooltip #one{
+        width:10px!important;
+        font-size:1px!important;
+        display:none;
+    }
+    .tooltip:hover #one {
+        visibility: hidden;
+        opacity:0;
+    }
+    .tooltip #two{
+        width: 100px!important;
+        font-size:13px!important;
+        margin-left: -70px;
+        padding:5px!important;
+    }
+    #polygon{
+        display:none;
+    }
+    footer{
+        display:none;
+    }
+}
+@media screen and (min-height:820px) and (max-height: 850px) {
+    footer{
+        bottom: 5px;
+    }
+}
+@media screen and (min-height:770px) and (max-height: 820px) {
+    #avatar {
+        width: 200px;
+        height: 200px;
+    }
+    #title{
+        font-size:30px;
+    }
+    #subtitle{
+        font-size:17px;
+    }
+    #main-container {
+        top: 3vw !important;
+    }
+    .row{
+        margin-top:25px;
+    }
+    #profiles-row i{
+        font-size:35px;
+    }
+    footer{
+        bottom: 5px;
+    }
+}
+@media screen and (min-height:730px) and (max-height: 770px) {
+    #avatar {
+        width: 190px;
+        height: 190px;
+    }
+    #title{
+        font-size:30px;
+    }
+    #subtitle{
+        font-size:16px;
+    }
+    .about{
+        font-size: 13px!important;
+    }
+    #main-container {
+        top: 3vw !important;
+    }
+    .row{
+        margin-top:15px;
+    }  
+    #profiles-row{
+        font-size:35px;
+        margin:25px 0 20px 0;
+    }
+    footer{
+        bottom:5px;
+    }
+}
+@media screen and (min-height:0px) and (max-height: 730px) {
+    #avatar {
+        width: 190px;
+        height: 190px;
+    }
+    #title{
+        font-size:30px;
+    }
+    #subtitle{
+        font-size:16px;
+    }
+    #main-container {
+        top: 3vw !important;
+    }
+    .about{
+        font-size: 13px!important;
+    }
+    .row{
+        margin-top:15px;
+    }
+    .profiles-row{
+        margin:30px 0 15px 0!important;
+    }
+    footer{
+        display:none;
+    }
+}

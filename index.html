@@ -2,44 +2,50 @@
 <html>
   <head>
     
-    <!--meta-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Passionate developer and outdoor enthusiast." />
     <meta name="author" content="Gabriel Salinas" />
-
-    <!--favicon-->
     <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=3" />
 
     <title>Gabriel Salinas</title>
 
-    <!--styles-->
-    <link rel="stylesheet" href="styles.css?5" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!--scripts-->
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Scripts -->
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-  
-    <audio id="page" src="sounds/turn-page.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <audio id="git" src="sounds/git.mp3"></audio>
     <audio id="linked" src="sounds/linked.mp3"></audio>
     <audio id="stack" src="sounds/stack.mp3"></audio>
     <audio id="tweet" src="sounds/tweet.mp3"></audio>
     <audio id="mail-audio" src="sounds/mail.mp3"></audio>
 
+    <!-- Styles -->
+    <link href="css/min/main.min.css?14" rel="stylesheet" />
+    <link href="css/media.css?13" rel="stylesheet" />
+    <link href="css/min/animations.min.css?11" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  
+
+
+    <!-- Render time -->
+    <script type="text/javascript">
+      var start_time=+new Date();
+      window.onload=function(){
+          var time = (+new Date()-start_time);
+          $('#render-time').text(time);
+        };
+    </script>
+    
   </head>
    
   <body>
-
-    <!--background particles-->
     <div id="particles-js">
 
-      <!--main container-->
+      <!-- Main container -->
       <div data-aos="zoom-in" id="main-container">
 
+        <!-- Sub container -->
         <div class="sub-container">
           
           <div class="tooltip">
@@ -51,22 +57,12 @@
             Gabriel Salinas<span id="dot">.</span><span id="codes">Codes</span>
           </div>
 
-          <div id="subtitle">
+          <div id="subtitle" style="font-size:17px">
             <i class="fas fa-mug-hot" style="margin-right:5px;"></i>DEVELOPER
           </div>
 
           <div class="row">
-            
-            <div class="col-left">
-              <div class="tooltip">
-                <a onclick="page_sound()" href="http://www.mattahan.com/" target="_blank">
-                  <img src="images/leaf-book.png">
-                  <div id="two">Art by Mattahan</div>
-                </a>
-              </div>
-            </div>
-              
-            <div class="col-right">
+            <div class="about">
                 Coding is a catalyst for creation, to portray 
                 an idea into reality and be able to interact with it anywhere in the world I find 
                 it to be fascinating, it is the reason I got hooked at 14.
@@ -77,73 +73,123 @@
                 labyrinth. Feel free to check my work or connect with 
                 me:
             </div>
-              
           </div>
             
+          <div class="profiles-row">
 
-          <!-- Profile links -->
-          <div id="profiles-row">
-
-            <div class="col" id="github">
-              <a onclick="sound_one()" href="https://github.com/gass-git" target="_blank">
-                <i class="fab fa-github" style="transition: 500ms ease-in-out"></i>
+            <div class="col" id="one">
+              <a onclick="git_sound()" href="https://github.com/gass-git" target="_blank">
+                <i class="fab fa-github"></i>
               </a>
             </div>
 
-            <div class="col" id="linked-in">
-              <a onclick="sound_two()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
-                <i class="fab fa-linkedin-in" style="transition: 500ms ease-in-out"></i>
+            <div class="col" id="one">
+              <a onclick="link_sound()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
 
-            <div class="col" id="stackoverflow">
-              <a onclick="sound_three()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
-                <i class="fab fa-stack-overflow" style="transition: 500ms ease-in-out"></i>
+            <div class="col" id="one">
+              <a onclick="stack_sound()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
               </a>
             </div>
 
-            <div class="col" id="twitter">
-              <a onclick="sound_four()" href="https://twitter.com/gass_tweets" target="_blank">
-                <i class="fab fa-twitter" style="transition: 500ms ease-in-out"></i>
+            <div class="col" id="one">
+              <a onclick="tweet_sound()" href="https://twitter.com/gass_tweets" target="_blank">
+                <i class="fab fa-twitter"></i>
               </a>
             </div>
 
-            <div class="col" id="mail-div">
+            <div class="col">
               <div class="tooltip">
-                <a id="mail-link" href="#"  onclick="animate_envelope()">  
-                  <i id="envelope" class="fas fa-envelope"></i>
-                  <div id="tooltip-three" style="transition: 500ms ease-in-out">Let's talk</div>
+                <a id="mail-link" href="#"  onclick="copy_email()">  
+                  <i id="envelope" class="fas fa-envelope" style="transition: 700ms ease-in-out"></i>
+                  <div id="two" style="transition: 500ms ease-in-out">Let's talk</div>
                 </a>
               </div>  
             </div>
 
           </div>
 
-          <!---- Responsive footer ---->
-          <div id="footer-2">
+        </div>
+        <!-- End of sub-container -->
 
-            <div>
-              <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
-                © gabrielsalinas.codes 2021
-              </a> - inspired by 
-              <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
-                DarkCode
-              </a> design
-            </div>
+        <script>
+          function git_sound(){ document.getElementById('git').play() };
+          function link_sound(){ document.getElementById("linked").play() };
+          function stack_sound(){ document.getElementById('stack').play() };
+          function tweet_sound(){ document.getElementById('tweet').play() };
 
-            <div>
-              particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
-              - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
-              - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
-              & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
-            </div>   
+          var tooltip = document.getElementById('two');
+          var env = $('#envelope');
 
-          </div>
-          <!---- End of footer ---->
+          function copy_email(){
 
-        </div><!-- End of sub-container -->
+              copyToClipboard();
+              tooltip.style.cssText = null;  // Start fresh: clean styles on html tag
+              document.getElementById('mail-audio').play();
+              envelope.addEventListener('mouseout', retrieve_msg);
 
-        <!-- Bottom polygon-->
+              env.css('transition','none');
+              env.css('margin-top','-5px');
+
+              env.removeClass('fa-envelope');
+              env.addClass('fa-envelope-open');
+              
+              setTimeout(show_envelope, 200);
+              setTimeout(close_envelope, 800);
+
+              // Hide and set tooltip to default
+              setTimeout(hide_tooltip, 800);
+              setTimeout(retrieve_msg, 800);
+
+              function hide_tooltip(){ tooltip.style.opacity = '0' }
+
+              function copyToClipboard() {
+                var dummy = document.createElement("textarea");
+                document.body.appendChild(dummy); 
+                dummy.value = 'gabriel.salinas@protonmail.com';
+                dummy.select();
+                document.execCommand("copy");
+                document.body.removeChild(dummy);
+                tooltip.innerHTML = 'Email copied!';
+              }
+
+              function close_envelope(){
+                $('#envelope').css('margin-top','0px')
+                envelope.classList.remove('fa-envelope-open-text');
+                envelope.classList.add('fa-envelope');
+
+                setTimeout(function(){ $('#envelope').css('transition','500ms ease-in-out') }, 200);
+              }
+
+              function show_envelope(){
+                envelope.classList.remove('fa-envelope-open');
+                envelope.classList.add('fa-envelope-open-text');
+              }
+
+              function retrieve_msg(){
+                setTimeout(function(){
+                  tooltip.innerHTML = "Let's talk";
+                },200);
+              }
+          } // END of copy_email functions
+
+
+          /**@abstract
+           * 
+           * Tooltip might have "visibility = hidden" if the email btn was clicked 
+           * if it's the case remove all styles in html tag.
+           * 
+           */
+          envelope.addEventListener('mouseover', function(){
+              var tooltip = document.getElementById('two');
+              if(tooltip.style.cssText != null){ tooltip.style.cssText = null }
+              if(tooltip.innerHTML != "Let's talk"){ tooltip.innerHTML = "Let's talk" } 
+          });
+        </script>
+
         <div id="polygon">
           <svg 
           width="100%"
@@ -153,7 +199,6 @@
           <polygon points="0,0 0,100 100,100" />
           </svg>
         </div> 
-        <!-- End of polygon -->
 
       </div>
       <!-- End of main-container -->
@@ -161,28 +206,25 @@
     </div>
     <!-- End of particles-js -->
 
-    <!---- Footer ---->
-    <div id="footer">
-
+    <footer>
       <div>
-        <a id="gabrielsalinas-link" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
-          © gabrielsalinas.codes 2021
-        </a> - inspired by 
-        <a id="darkcode-link" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
+        <a style="color:white;opacity:.7" href="https://github.com/gass-git/gabrielsalinas.codes" target="_blank">
+          © gabrielsalinas.codes 2021 rendered in <span id="render-time"></span> ms
+        </a>
+        - inspired by 
+        <a class="op-07" style="color:var(--color-5)" href="https://www.youtube.com/watch?v=4XmhtbcMWEY&list=PLfmi5pQYsS8Pj62BbITGfdtItWePl9BzQ&index=17" target="_blank">
           DarkCode
         </a> design
       </div>
 
       <div>
-        particles JS by <a id="vincent-link" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
-          - background by <a id="background-link" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
-          - using <a id="aos-link" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
-          & <a id="fs-link" href="https://fontawesome.com/" target="_blank">FS</a>
+        particles JS by <a class="op-07" style="color:var(--color-3)" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
+          - background by <a class="op-07" style="color:var(--color-4)" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
+          - using <a class="op-07" style="color:var(--color-6)" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
+          & <a class="op-07" style="color:var(--color-8)" href="https://fontawesome.com/" target="_blank">FS</a>
       </div>   
-
-    </div>
-    <!---- End of footer ---->
-
+    </footer>
+    
     <!--Particles scripts-->
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -193,4 +235,3 @@
           
   </body>
 </html>
-
