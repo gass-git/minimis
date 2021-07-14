@@ -4,12 +4,12 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Gabriel Salinas" />
     <link rel="icon" type="image/png" href="images/coffee-favicon.png?v=3" />
 
     <title>Gabriel Salinas</title>
 
     <!-- Scripts -->
+    <script type="text/javascript" src="js/main.js" defer></script>
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -20,13 +20,11 @@
     <audio id="mail-audio" src="sounds/mail.mp3"></audio>
 
     <!-- Styles -->
-    <link href="css/main.css?18" rel="stylesheet" />
-    <link href="css/media.css?18" rel="stylesheet" />
+    <link href="css/min/main.min.css?19" rel="stylesheet" />
+    <link href="css/min/media.min.css?19" rel="stylesheet" />
     <link href="css/min/animations.min.css?11" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  
-
 
     <!-- Render time -->
     <script type="text/javascript">
@@ -115,82 +113,6 @@
         </div>
         <!-- End of sub-container -->
 
-        <script>
-
-          function git_sound(){ document.getElementById('git').play() };
-          function link_sound(){ document.getElementById("linked").play() };
-          function stack_sound(){ document.getElementById('stack').play() };
-          function tweet_sound(){ document.getElementById('tweet').play() };
-
-          var tooltip = document.getElementById('two');
-          var env = $('#envelope');
-
-          function copy_email(){
-
-              copyToClipboard();
-              tooltip.style.cssText = null;  // Start fresh: clean styles on html tag
-              document.getElementById('mail-audio').play();
-              envelope.addEventListener('mouseout', retrieve_msg);
-
-              env.css('transition','none');
-              env.css('margin-top','-5px');
-
-              env.removeClass('fa-envelope');
-              env.addClass('fa-envelope-open');
-              
-              setTimeout(show_envelope, 200);
-              setTimeout(close_envelope, 800);
-
-              // Hide and set tooltip to default
-              setTimeout(hide_tooltip, 800);
-              setTimeout(retrieve_msg, 800);
-
-              function hide_tooltip(){ tooltip.style.opacity = '0' }
-
-              function copyToClipboard() {
-                var dummy = document.createElement("textarea");
-                document.body.appendChild(dummy); 
-                dummy.value = 'gabriel.salinas@protonmail.com';
-                dummy.select();
-                document.execCommand("copy");
-                document.body.removeChild(dummy);
-                tooltip.innerHTML = 'Email copied!';
-              }
-
-              function close_envelope(){
-                $('#envelope').css('margin-top','0px')
-                envelope.classList.remove('fa-envelope-open-text');
-                envelope.classList.add('fa-envelope');
-
-                setTimeout(function(){ $('#envelope').css('transition','500ms ease-in-out') }, 200);
-              }
-
-              function show_envelope(){
-                envelope.classList.remove('fa-envelope-open');
-                envelope.classList.add('fa-envelope-open-text');
-              }
-
-              function retrieve_msg(){
-                setTimeout(function(){
-                  tooltip.innerHTML = "Let's talk";
-                },200);
-              }
-          } // END of copy_email functions
-
-
-          /**@abstract
-           * 
-           * Tooltip might have "visibility = hidden" if the email btn was clicked 
-           * if it's the case remove all styles in html tag.
-           * 
-           */
-          envelope.addEventListener('mouseover', function(){
-              var tooltip = document.getElementById('two');
-              if(tooltip.style.cssText != null){ tooltip.style.cssText = null }
-              if(tooltip.innerHTML != "Let's talk"){ tooltip.innerHTML = "Let's talk" } 
-          });
-        </script>
-
         <div id="polygon">
           <svg 
           width="100%"
@@ -222,10 +144,10 @@
         particles JS by <a class="op-07" style="color:var(--color-3)" href="https://github.com/VincentGarreau" target="_blank">VincentGarreau</a>
           - background by <a class="op-07" style="color:var(--color-4)" href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds</a> 
           - using <a class="op-07" style="color:var(--color-6)" href="https://github.com/michalsnik/aos" target="_blank">aos</a> 
-          & <a class="op-07" style="color:var(--color-8)" href="https://fontawesome.com/" target="_blank">FS</a>
+          & <a class="op-07" style="color:var(--color-8)" href="https://fontawesome.com/" target="_blank">FontAwesome</a>
       </div>   
     </footer>
-    
+
     <!--Particles scripts-->
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -233,6 +155,6 @@
     <!-- Aos animation scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
-          
+
   </body>
 </html>
