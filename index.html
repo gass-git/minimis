@@ -20,7 +20,7 @@
     <audio id="mail-audio" src="sounds/mail.mp3"></audio>
 
     <!-- Styles -->
-    <link href="css/main.css?20" rel="stylesheet" />
+    <link href="css/main.css?21" rel="stylesheet" />
     <link href="css/media.css?12" rel="stylesheet" />
     <link href="css/min/animations.min.css?11" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -76,27 +76,31 @@
           <div class="profiles-row">
 
             <div class="col" id="one">
-              <a onclick="git_sound()" href="https://github.com/gass-git" target="_blank">
+              <a id="github" onclick="git_sound()" href="https://github.com/gass-git" target="_blank">
                 <i class="fab fa-github"></i>
               </a>
+              <div class="sub-profiles" id="show-github">Github</div>
             </div>
 
             <div class="col" id="one">
-              <a onclick="link_sound()" href="https://www.linkedin.com/in/gabriel-salinas-7a188196/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
+              <a id="blog" onclick="link_sound()" href="https://blog.gass.dev" target="_blank">
+                <i class="fas fa-keyboard"></i>
               </a>
+              <div class="sub-profiles" id="show-blog">Blog</div>
             </div>
 
             <div class="col" id="one">
-              <a onclick="stack_sound()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
+              <a id="codereview" onclick="stack_sound()" href="https://codereview.stackexchange.com/users/239120/gass?tab=profile" target="_blank">
+                <i class="fas fa-search"></i>
+              </a>
+              <div class="sub-profiles" id="show-codereview">Code Review</div>
+            </div>
+
+            <div class="col" id="one">
+              <a id="stackoverflow" onclick="stack_sound()" href="https://stackoverflow.com/users/14895985/gassz?tab=profile" target="_blank">
                 <i class="fab fa-stack-overflow"></i>
               </a>
-            </div>
-
-            <div class="col" id="one">
-              <a onclick="tweet_sound()" href="https://twitter.com/gass_tweets" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
+              <div class="sub-profiles" id="show-stackoverflow">Stackoverflow</div>
             </div>
 
             <div class="col">
